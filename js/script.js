@@ -13,23 +13,17 @@ Di cosa ho bisogno per generare i numeri?
 Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
  */
-const gridElement = document.querySelector (section.game);
-
-
-
-
-
-
-
-
-
-
-
-
-
 //funcions
 function creatNewCell () {
     const cellElement = document.createElement ("div");
     cellElement.className = "cell";
     return cellElement;
+}
+
+
+const gridElement = document.querySelector ("section.game");
+
+for (let i = 0; i < 100; i++){
+    const realCell = creatNewCell ();
+    gridElement.appendChild (creatNewCell ())
 }
