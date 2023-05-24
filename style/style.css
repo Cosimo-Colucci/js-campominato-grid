@@ -31,8 +31,8 @@ main{
 
 section.game{
     background-color: red;
-    height: 80%;
-    width: 80%;
+    width: 700px;
+    height: 700px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -42,7 +42,9 @@ height: calc(100% / 10);
 width:calc(100% / 10);
 border: 1px solid black;
 }
-
+.active{
+    background-color: green;
+}
 footer{
     height: 50px;
     width: 100vw;

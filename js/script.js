@@ -21,9 +21,30 @@ function creatNewCell () {
 }
 
 
-const gridElement = document.querySelector ("section.game");
 
-for (let i = 0; i < 100; i++){
-    const realCell = creatNewCell ();
-    gridElement.appendChild (creatNewCell ())
-}
+
+const sectionGame = document.querySelector("section.game");
+const button = document.querySelector("button");
+
+button.addEventListener (("click"), function(){
+
+    sectionGame.innerHTML = "";
+
+    const gridElement = document.querySelector ("section.game");
+    
+
+    for (let i = 0; i < 100; i++){
+        const realCell = creatNewCell ();
+
+        realCell.addEventListener('click', function(){
+            console.log(i + 1);
+            realCell.classList.toggle("active");
+        });
+
+
+        gridElement.appendChild (creatNewCell ())
+    };
+
+});
+
+
